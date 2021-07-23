@@ -11,7 +11,7 @@ body{
 }
 h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     color: #484848;
     font-family: 'futura_ltbold', sans-serif;
 }
@@ -30,6 +30,9 @@ i {
 	--heading_color:#0e4d96;
 	--heading_second_color:#0c59db;
 }
+.main_container{
+    overflow-x: hidden;
+}
 /* =============================navbar css start here=================================== */
 
 .fixed-top {
@@ -38,12 +41,123 @@ i {
 	transition: transform .3s;
 }
 .navbar_color{
-	background-color: var(--heading_second_color);
+	background-color: #fff;
+    /* background-color: var(--heading_second_color); */
+    box-shadow: -1px 6px 9px -6px rgba(0,0,0,0.82);
+    -webkit-box-shadow: -1px 6px 9px -6px rgba(0,0,0,0.82);
+    -moz-box-shadow: -1px 6px 9px -6px rgba(0,0,0,0.82);
+    color: #333;
+
+}
+.navbar-expand-lg .navbar-nav li {
+    padding-right: 2rem;
+    letter-spacing: 1px;
+    color: rgb(153, 139, 139) !important;
+  
+  } 
+.navbar-collapse ul li a{
+      color: #333 !important;
+      font-weight: 600;
+  }
+ .navbar-collapse ul li a:hover{
+    color: var(--second_color) !important;
+    font-weight: 600;
+}
+.navbar-toggler-icon{
+    color: #333 !important;
+}
+.navbar-dark .navbar-toggler {
+    /* color: rgba(255,255,255,.55); */
+    /* border-color: rgba(255,255,255,.1); */
+    border-color: #333 !important;
+    color: #333 !important;
+}
+/*=============================== quote button css here====================================== */
+.btn_getquote{
+    width: 100%;
+    padding: 8px 25px;
+    background: var(--heading_second_color) !important;
+    color: #fff !important;
+    outline: none;
+    border: none;
+}
+.btn_quote_top{
+    width: 100%;
+    padding: 8px 30px !important;
+    background: var(--second_color) !important;
+    color: #fff !important;
+    outline: none;
+    border: none;
+    font-size: .8rem !important;
+    font-weight: 500 !important;
+    text-transform: capitalize !important;
+    border-radius: 0 !important;
+    letter-spacing: 1px !important;
+    box-shadow: 7px 10px 12px -1px rgba(0,0,0,0.43);
+    -webkit-box-shadow: 7px 10px 12px -1px rgba(0,0,0,0.43);
+    -moz-box-shadow: 7px 10px 12px -1px rgba(0,0,0,0.43);
+
+    /* box-shadow: 0px 8px 44px -4px rgba(0,0,0,0.5);
+-webkit-box-shadow: 0px 8px 44px -4px rgba(0,0,0,0.5);
+-moz-box-shadow: 0px 8px 44px -4px rgba(0,0,0,0.5); */
+
+}
+.navbar-collapse ul li .btn_quote_top:hover{
+    font-weight: bold;
+color: #fff !important;
+
+}
+/* .btn_quote_top a{
+  font-size: 1rem !important;
+  font-weight: bold !important;
+  text-transform: capitalize !important;
+} */
+.form-group{
+    margin-top: 1.5rem !important;
+}
+input {
+    border: 1px solid #ccc !important;
+    border-radius: 5px;
+    padding: 5px;
+    outline: none !important;
+    height: 25px;
+    width: 150px;
+  }
+  
+  input:focus {
+    border-color:var(--heading_second_color) !important;
+ 
+  }
+  .modal-header .close {
+    padding: 1rem 1rem;
+    margin: 0 !important;
+    background-color: var(--heading_second_color) !important;
+    color: white !important;
+    opacity: 1 !important;
+}
+.close:hover {
+    color: #000;
+    text-decoration: none;
 }
 
+/* top nav call css */
+.circle_icon2 i{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: var(--second_color);
+    text-align: center;
+    line-height: 32px;
+    color: #fff;
+    font-size:12px;
+    margin-right: .5rem;
+    box-shadow: 7px 10px 12px -1px rgba(0,0,0,0.43);
+    -webkit-box-shadow: 7px 10px 12px -1px rgba(0,0,0,0.43);
+    -moz-box-shadow: 7px 10px 12px -1px rgba(0,0,0,0.43);
+  }
 /*========================================= top header carousel start here========================= */
 /* Carousel */
-.home .carousel {
+/* .home .carousel {
     position: relative;
     height: 650px;
     display: inline-block;
@@ -119,9 +233,8 @@ i {
     margin-top:-25px;
     top:50%;
 }
-.navbar-expand-lg .navbar-nav li {
-  padding-right: 2rem;
-}
+*/
+
   /* ========================home services package section start here============== */
 .home_services_section{
 	position: relative;
@@ -296,7 +409,7 @@ padding-top: 5rem;
 
 
 
-/* slider css here */
+/*============================= slider css here======================= */
 .slider{
 	position: relative;
 	width: 100%;
@@ -305,9 +418,12 @@ padding-top: 5rem;
      
 }
 .myslide{
+ 
 	height: 655px;
 	display: none;
 	overflow: hidden;
+    background-color: rgba(0,0,0,.3) !important;
+   
 }
 
 .prev, .next{
@@ -375,7 +491,7 @@ padding-top: 5rem;
 .txt{
 	position: absolute;
 	color: #fff;
-	letter-spacing: 2px;
+	letter-spacing: 1px;
 	line-height: 35px;
 	top: 40%;
 	left: 15%;
@@ -384,6 +500,11 @@ padding-top: 5rem;
   	animation-name: posi;
   	animation-duration: 2s;
 	z-index: 1;
+    width: 60%;
+    background: rgba(0,0,0,.5);
+    width: auto;
+    border-radius: 8px;
+    padding: 1rem;
 }
 
 @-webkit-keyframes posi {
@@ -398,15 +519,23 @@ padding-top: 5rem;
 }
 
 .txt h3{
-	color: var(--first_color); /* blue */
+	color: var(--first_color); 
 	font-size: 50px;
 	margin-bottom: 20px;
 }
 .txt h1{
 	/* color: var(--heading_second_color); */
-    color: #fff;
-	/* font-size: 30px; */
-	margin-bottom: 20px;
+    color: var(--first_color); 
+    /* color: var(--heading_second_color); */
+	font-size: 35px;
+	margin-bottom: 10px;
+    
+}
+.txt h2{
+	/* color: var(--heading_second_color); */
+    color: #fff; /* blue */
+	font-size: 25px;
+	margin-bottom: 10px;
 }
 .txt p{
 	font-weight: bold;
@@ -418,11 +547,11 @@ padding-top: 5rem;
 .myslider_img{
     position: relative;
     z-index: 0;
-	/* transform: scale(1.5, 1.5);
+	transform: scale(1.5, 1.5);
 	-webkit-animation-name: zoomin;
-  	-webkit-animation-duration: 20s;
+  	-webkit-animation-duration: 40s;
   	animation-name: zoomin;
-  	animation-duration: 20s; */
+  	animation-duration: 40s;
       background:rgba(0,0,0,.5) !important;
       background-image:linear-gradient(to top, rgba(0,0,0,.1)0%, rgba(0,0,0,.1)100%) !important;
 }
@@ -576,10 +705,394 @@ padding-top: 5rem;
     }
 }
 
+/* our projects section here  */
+.our_recent_work h2{
+    text-align: center;
+   height: auto;
+   width: 100%;
+   font-size: 2rem;
+   padding: 1rem 0;
+}
+.our_recent_work p{
+    text-align: center;
+}
+.main{
+    margin-top: 0rem;
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+  /* .main h1{
+   text-align: center;
+   height: auto;
+   width: 100%;
+   font-size: 2rem;
+   padding: 1rem 0;
+  }
+  .main p{
+    text-align: center;
+   
+   } */
+   .main .gallery{
+     position: relative;
+     height: auto;
+     width: 90%;
+     margin: auto;
+     padding: 45px 0;
+     display: grid;
+      grid-template-columns: auto auto auto auto; /* i write here auto 4 times bcz we want 4 row so */
+      grid-gap: 2vh;
+      grid-auto-flow: dense;
+   }
+   .main .gallery .img{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+  .main .gallery .img:first-child{
+    grid-column-start: span 2;
+    grid-row-start: span 2;
+  }
+  .main .gallery .img:nth-child(2n+3){
+    
+    grid-row-start: span 2;
+  }
+  .main .gallery .img:nth-child(4n+5){
+    grid-column-start: span 2;
+    grid-row-start: span 2;
+  }
+  .main .gallery .img:nth-child(6n+7){
+    
+    grid-row-start: span 1;
+  }
+  .main .gallery .img:nth-child(8n+9){
+    grid-column-start: span 1;
+    grid-row-start: span 1;
+  }
+  .main .gallery .img img{
+   height: 100%;
+   width: 100%;
+   object-fit: cover;
+  }
+  @media only screen and (max-width:768px){
+    .main .gallery {
+      display: grid;
+      grid-template-columns: auto auto auto; /* i write here auto 4 times bcz we want 4 row so */
+      grid-gap: 2vh;
+      grid-auto-flow: dense;
+  
+    }
+  }
+  @media only screen and (max-width:430px){
+    .main .gallery {
+   display: block;
+  
+    }
+    .main .gallery .img{
+      display: block;
+      width: 100%;
+      height: 100%;
+  
+    }
+    .main .gallery .img img{
+      display: block;
+    
+    }
+  }
 
 
 
 
+  .img {
+    position: relative;
+    padding: 0;
+    /* width: 300px; */
+    width:100%;
+    height: auto;
+    display: block;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  
+  .content {
+    opacity: 0;
+    font-size: 40px;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    /* color: #1c87c9; */
+    color: #fff;
+    /* background-color: rgba(200, 200, 200, 0.5); */
+    background: var(--heading_color);
+    /* width: 300px; */
+    /* height: 300px; */
+    height: 100%;
+    width: 100%;
+    -webkit-transition: all 400ms ease-out;
+    -moz-transition: all 400ms ease-out;
+    -o-transition: all 400ms ease-out;
+    -ms-transition: all 400ms ease-out;
+    transition: all 400ms ease-out;
+    text-align: center;
+  }
+  
+  .img .content:hover {
+    opacity: 1;
+  }
+  
+  .img .content .text {
+      text-align: center;
+    height: 0;
+    opacity: 1;
+    transition-delay: 0s;
+    transition-duration: 0.4s;
+  }
+  .img .content .text h5{
+    text-align: center;
+  height: 0;
+  opacity: 1;
+  transition-delay: 0s;
+  transition-duration: 0.4s;
+  color: #fff;
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+  .img .content:hover .text h5{
+    /* text-align: center; */
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    /* transform: translateY(150px);
+    -webkit-transform: translateY(150px); */
+  }
+
+
+/*================================================= about us amin page start here========================== */
+.about_banner{
+    /* background-image: url("../images/architect-3979490_1920.jpg"); */
+    background-image:linear-gradient(180deg, rgba(34, 37, 51, 0.5)0%, rgba(34, 37, 51, 0.5)100%), url('../images/architect-3979490_1920.jpg') !important;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.my_aboutus {
+   padding: 15rem 0;
+}
+.my_aboutus h1{
+  
+    text-align: center;
+    color: var(--second_color);
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+.my_aboutus p{
+ 
+    text-align: center;
+    color: #fff;
+    font-size: 1.5rem;
+    
+  
+}
+.after_banner_about{
+    margin: 0;
+    padding: 1rem 0;
+    /* background: rgba(12,89,219,.2);  */
+}
+.who_weare_about{
+  background: rgba(12,89,219,.2); 
+}
+.who_weare_about h2{
+text-align: center;
+padding: 3rem 0;
+}
+.who_weare_about p{
+   line-height: 2;
+    }
+    @media screen and (max-width:800px) {
+        .my_aboutus {
+           padding: 8rem 0;
+        }
+        .my_aboutus h1{
+          
+            text-align: center;
+            color: var(--second_color);
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        .my_aboutus p{
+         
+            text-align: center;
+            color: #fff;
+            font-size: 1.2rem;
+            padding: 0 .5rem;
+            
+          
+        } 
+    }
+/*================================================= about us amin page end here========================== */
+
+
+/* =======================================contact page start css here=============================
+============================================================================================= */
+.contact_banner_img{
+
+    background-image:linear-gradient(180deg, rgba(34, 37, 51, 0.5)0%, rgba(34, 37, 51, 0.5)100%), url("../images/student-849825_1280.jpg");
+    /* background-image:linear-gradient(180deg, rgba(34, 37, 51, 0.4)0%, rgba(34, 37, 51, 0.4)100%), url('../images/2761902.jpg') !important; */
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+   
+}
+.contact_banner{
+    padding: 15rem 0;  
+}
+.contact_banner h1{
+ 
+    text-align: center;
+    color: var(--second_color);
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+.contact_banner p{
+    text-align: center;
+    color: #fff;
+    font-size: 1.5rem;
+}
+.form_and_map{
+    margin: 2rem 0;
+}
+.form_fields{
+    border: 1px solid silver;
+    padding: .5rem 1rem;
+}
+.map iframe{
+    width: 100%;
+    height: 82vh;
+}
+.contact_basic_details{
+    position: relative;
+    margin-top: 2rem;
+}
+.contact_basic_details h2{
+    text-align: center;
+    padding: 0rem 0;
+}
+/* .all_in_center{
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} */
+/* .phone_circle{
+    background: var(--heading_second_color);
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    display: block;
+    line-height: 32px;
+    padding: 1.8rem;
+} */
+/* .phone_circle i{
+color: #fff;
+font-size: 1.5rem;
+} */
+/* .my_center_icons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 0;
+}
+.first_phone{
+  margin-bottom: 1rem;
+}
+.my_center_icons a{
+    padding-bottom: 2.5rem;
+    text-decoration: none;
+} */
+
+
+
+ /*==================== my contact page css start here ================*/
+ 
+  .contact_us{
+    margin-top: 8rem;
+  }
+  .main_four{
+    margin-top: 2rem;
+  }
+ .box_1{
+   position: relative;
+   width: 100%;
+   height: 22rem;
+   text-align: center;
+ }
+ .circle_icon{
+   position: absolute;
+   top: 25%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   height: 80px;
+         width: 80px;
+   /* display: block; */
+   border-radius: 50%;
+   background: #0c59db;
+   text-align: center;
+   line-height: 80px;
+   color: #fff;
+   font-size: 25px;
+ 
+ }
+ .circle_icon i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+  
+  }
+ .box_1 .title{
+   font-size: 24px;
+   padding-top:10rem;
+ }
+ .box_1 p{
+   font-size: 18px;
+   padding:1rem .2rem 0 .2rem;
+ 
+ }
+ .box_1 a{
+   color: #333;
+ 
+ }
+ .cd_site{
+   font-weight: bold;
+ }
+
+.main_logo{
+    width: 5rem;
+    height: 4rem;
+  
+}
+
+@media screen and (max-width:800px) {
+ 
+    .contact_banner{
+        padding: 10rem 0;  
+    }
+    .contact_banner h1{
+        text-align: center;
+        font-size: 2rem;
+        padding: 0 .5rem;
+    }
+    .contact_banner p{
+        font-size: 1.2rem;
+        padding: 0 .5rem;
+    }
+}
+
+
+/* =======================================contact page end css here=============================
+============================================================================================= */
 
 
 
@@ -594,11 +1107,13 @@ padding-top: 5rem;
 /* Footer */
 footer {
     /* background: url(../images/footer_bg.jpg)no-repeat; */
-background-image: url('../images/home2.jpg');
+/* background-image: url('../images/home2.jpg'); */
+background-image:linear-gradient(rgba(34, 37, 51, 0.9), rgba(34, 37, 51, 0.9)), url('../images/home2.jpg');
 background-repeat: no-repeat;
     background-size:cover;
     position:relative;
-    padding-top:45px;
+    padding-top:90px;
+    /* background: rgba(34, 37, 51, 0.9) none repeat scroll 0 0; */
 }
 /* footer::before {
     background: rgba(255, 255, 255, 0.33) none repeat scroll 0 0;
@@ -611,7 +1126,7 @@ background-repeat: no-repeat;
     z-index: 1;
 } */
 footer::after {
-    background: rgba(34, 37, 51, 0.9) none repeat scroll 0 0;
+    /* background: rgba(34, 37, 51, 0.9) none repeat scroll 0 0; */
     content: "";
     height: 100%;
     left: 0;
@@ -652,6 +1167,7 @@ footer::after {
     text-align: center;
     width: 45px;
 	margin-right: 1rem;
+    margin-bottom: 2rem;
 }
 .footer_item .footer_social_icon .fa:hover,.footer_item .footer_social_icon .fa:focus {
     background: #d7a300 none repeat scroll 0 0;
@@ -724,11 +1240,51 @@ footer::after {
     color: #d7a300;
 }
 
+.wave{
+    position: absolute;
+    top: 0;
+}
 
+.custom-shape-divider-top-1626846252 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
 
+.custom-shape-divider-top-1626846252 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 127px;
+}
 
+.custom-shape-divider-top-1626846252 .shape-fill {
+    fill: #FFFFFF;
+}
 
+/* till shap css */
+/* .custom-shape-divider-top-1626846370 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
 
+.custom-shape-divider-top-1626846370 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 90px;
+}
+
+.custom-shape-divider-top-1626846370 .shape-fill {
+    fill: #FFFFFF;
+} */
 
 
 
