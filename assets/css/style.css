@@ -938,7 +938,7 @@ padding: 3rem 0;
 ============================================================================================= */
 .contact_banner_img{
 
-    background-image:linear-gradient(180deg, rgba(34, 37, 51, 0.5)0%, rgba(34, 37, 51, 0.5)100%), url("../images/student-849825_1280.jpg");
+    background-image:linear-gradient(180deg, rgba(34, 37, 51, 0.7)0%, rgba(34, 37, 51, 0.7)100%), url("../images/student-849825_1280.jpg");
     /* background-image:linear-gradient(180deg, rgba(34, 37, 51, 0.4)0%, rgba(34, 37, 51, 0.4)100%), url('../images/2761902.jpg') !important; */
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -954,6 +954,7 @@ padding: 3rem 0;
     font-size: 3.5rem;
     font-weight: bold;
 }
+
 .contact_banner p{
     text-align: center;
     color: #fff;
@@ -1234,10 +1235,16 @@ footer::after {
     margin-top:55px;
 }
 .footer_bottom a {
-    color: #ffcb0f;
+    color: var(--second_color);
 }
 .footer_bottom a:hover,.footer_bottom a:focus {
-    color: #d7a300;
+    color: var(--second_color);
+}
+
+.footer_logo{
+    width: 4rem;
+    height: 3.5rem;
+    margin-bottom: 1rem;
 }
 
 .wave{
