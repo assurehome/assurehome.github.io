@@ -1,6 +1,6 @@
 <?php 
 $errors = '';
-$myemail = 'anilkumawatk94@gmail.com';//<-----Put Your email address here.
+$myemail = 'damu@cdsoft.in';//<-----Put Your email address here.
 if(empty($_POST['name'])  || 
    empty($_POST['email']))
 {
@@ -27,8 +27,8 @@ if( empty($errors))
 	
 	$headers = "From: $myemail\n" .
 	"CC: emam@cdsoft.in";
-	$headers .= "Reply-To: $email_address";
-	
+
+		$headers .= "Reply-To: $email_address";
 	mail($to,$email_subject,$email_body,$headers);
 	//redirect to the 'thank you' page
 	header('Location: contact-form-thank-you.html');

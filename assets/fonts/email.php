@@ -5,11 +5,11 @@
 if(isset($_POST['email'])) {
  
  
-    $email_to = "anilkumawatk94@gmail.com";
+    $email_to = "damu@cdsoft.in";
  
       $subject2 = "your message submitted successfully"; //this is for client
  
-    
+     
  
      
  
@@ -26,8 +26,7 @@ if(isset($_POST['email'])) {
 		
  
     }
-  
- 
+    
     $first_name = $_POST['first_name']; // required
  
     $last_name = $_POST['last_name']; // required
@@ -44,14 +43,13 @@ if(isset($_POST['email'])) {
  
     $plot_location = $_POST['plot_location']; // not required
  
-    // $message = $_POST['message']; 
- 
      
-  $message2 = "Dear ".  $first_name . " " . $last_name . "," . "\n\n" ."Thank you for contacting us! We will get back to you shortly";  
+
+   $message2 = "Dear ".  $first_name . " " . $last_name . "," . "\n\n" ."Thank you for contacting us! We will get back to you shortly" . "\n\n" . "Regards," . "\n" . "Assurehomes";
     $error_message = "";
  
     $email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
-	 $email_subject = "Enquiry from $first_name  $last_name for homes";
+ $email_subject = "Assure Homes - Enquiry from $first_name  $last_name";
  
   if(!preg_match($email_exp,$email_from)) {
  
@@ -99,8 +97,7 @@ if(isset($_POST['email'])) {
  
     }
  
-
- 
+  
     $email_message .= "First Name: ".clean_string($first_name)."\n";
  
     $email_message .= "Last Name: ".clean_string($last_name)."\n";
@@ -117,52 +114,48 @@ if(isset($_POST['email'])) {
  
     $email_message .= "Plot Location: ".clean_string($plot_location)."\n";
  
-    // $email_message .= "Message: ".clean_string($message)."\n";
- 
  
 // create email headers
  
 $headers = 'From: '.$email_from."\r\n".
  
 'Reply-To: '.$email_from."\r\n" .
- 
+  "CC: emam@cdsoft.in" . "\r\n" .
 'X-Mailer: PHP/' . phpversion();
  $headers2 = "From: ". $email_to; //this will receiev to client
 @mail($email_to, $email_subject, $email_message, $headers);  
 @mail($email_from, $subject2, $message2, $headers2); //send email to user as well
 
-  //redirect
- // header('Location: index.html');
-
+    //redirect
+     header("Location:thanku.html");
+    //  if ($email_to->send()) {
+    //         Redirect_to("about.html");
+    //     } else {
+    //         Redirect_to("index.html");
+    //     }
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
 <html>
 <head>
-     
-       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css"
-        integrity="sha512-BnbUDfEUfV0Slx6TunuB042k9tuKe3xrD6q4mg5Ed72LTgzDIcLPxg6yI2gcMFRyomt+yJJxE+zJwNmxki6/RA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-        crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-        crossorigin="anonymous"></script>
 	<title>Contact form handler</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 </head>
+
 <body>
-      
-    
-<div class="contaiver" style="margin-top:10rem;">
-  <div class="row">
-    <div class="col-6 mx-auto">
-      <div class="row">
-        <div class="col-12 mt-5 d-flex flex-column align-items-center justify-content-center">
-            <i class="fas fa-check-circle fa-8x" style="color:#00A300;"></i>
-        <h1 class="text-center">Thank you for your message!</h1> <h6  class="text-center text-primary">We will get back to you as soon as possible</h6>
-        </div>
-      </div>
+    <div class="d-flex flex-column justify-content-center align-items-center" style="width:100%; height:100vh;">
+      <div class="d-flex flex-column justify-content-center align-items-center">
+<i class="fa fa-check-circle fa-5x text-center" style="color:#26a50b;" aria-hidden="true" ></i>
+<h1 class="text-center">Thank you for your message!</h1> <h6 class="text-center">We will contact you as soon as possible.</h6> 
     </div>
-  </div>
-</div>
+      </div>
+
+<?php
+echo nl2br($errors);
+//redirect
+ //header("Location:index.html");
+
+?>
 
 
 </body>

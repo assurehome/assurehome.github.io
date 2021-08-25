@@ -1,9 +1,19 @@
- //===== Prealoder 
+
+
+
+ //===== Prealoder
+    
  $(window).on('load', function(event) {
   $('.preloader').delay(500).fadeOut(500);
 });
 
+// accordion js
+$(".accordian").on("click", ".accordian-title", function () {
+  $(this).toggleClass("active").next().slideToggle(500);
+});
+
 // ==============navbar delay effect============ 
+
 document.addEventListener("DOMContentLoaded", function(){
 		
   window.addEventListener('scroll', function() {
@@ -103,6 +113,7 @@ anime.timeline({loop: true})
   });
   
   
+  
 //popup message script
   window.addEventListener("DOMContentLoaded", function () {
   // get the form elements defined in your form HTML above
@@ -152,4 +163,8 @@ function ajax(method, url, data, success, error) {
   xhr.send(data);
 }
 
-
+$('.defered_loading').each(function() {
+  $(this).attr('src', $(this).attr('delayedsrc'));
+}).promise().done(function() {
+  // intialize your slider here
+});
