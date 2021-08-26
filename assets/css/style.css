@@ -350,7 +350,7 @@ background: #fff !important;}
 .inner-container h2{
   margin-bottom: 30px;
   padding-top: 1rem;
-  font-size: 30px;
+  font-size: 2.5rem;
   font-weight: 900;}
 
 .text{
@@ -391,8 +391,9 @@ background: #fff !important;}
 
 /* =============services css start here================== */
 .our_services_div {
-  margin:2rem 0 0rem 0;}
+  margin:0rem 0 0rem 0;}
 .our_services_div h2{
+  font-size: 2.5rem;
   text-align: center;}
 
 .services .box {
@@ -601,6 +602,9 @@ width: 80%;}
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 1.9rem;}
+  .head_title2{
+    font-size: 2.5rem !important;
+  }
 @media screen and (max-width:800px) {
   .advantages_content_box p{
     padding: 1rem .2rem 0 1.5rem;
@@ -925,7 +929,8 @@ color: #fff}
   font-size: 3rem;}
 .all_services h2{
   text-align: center;
-  padding: 2rem 0;}
+  font-size: 2.5rem;
+  padding: 0rem 0;}
 .services_sub_content ul li{
   list-style-type: circle;
   margin-left: 1rem;}
@@ -1049,7 +1054,8 @@ padding:0 0 1rem 0;}
   position: relative;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-  background: #2e363a;
+  /* background: #2e363a; */
+  background-color: #28304c !important;
   border: 5px solid #18ba60 ;
 }
 .right_sides {
@@ -1064,7 +1070,7 @@ padding:0 0 1rem 0;}
   background-color: #fff;
   box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px,
     rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
-  border: 5px solid #18ba60 ;
+  border: 5px solid #18ba60;
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -1164,7 +1170,8 @@ textarea {
   border: 1px solid #fff;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
   /* background-color: #00b4db; */
-  background-color: #2e363a;
+  /* background-color: #2e363a; */
+  background-color: #28304c !important;
   height: auto;}
 
 .tab i {
@@ -1247,7 +1254,8 @@ textarea {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   /* background-color: #00b4db; */
-  background: #2e363a;
+  /* background: #2e363a; */
+  background-color: #28304c !important;
   border: 5px solid #18ba60;
   height: auto;}
 
