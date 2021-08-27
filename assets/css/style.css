@@ -512,6 +512,8 @@ background: #fff !important;}
     }
 }
 @media screen and (max-width:800px) {
+  .services .box {
+    height: 22rem;}
   .our_services_div {
     margin:0rem 0 0rem 0;}
 }
