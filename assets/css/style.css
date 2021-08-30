@@ -1441,7 +1441,7 @@ text-align: center;
   padding: 1rem;
 }
 .interior_div h6{
- font-size: 1.4rem;
+ font-size: 1.2rem;
 color: #fff;
 
 text-align: center;
@@ -1624,4 +1624,11 @@ height: 28rem;
   content: "\002b";
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
+}
+.collapse ul .text_blues a{
+  color: var(--heading_second_color) !important;
+
+}
+.interior_div{
+
 }
